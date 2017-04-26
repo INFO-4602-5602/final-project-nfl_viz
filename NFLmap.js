@@ -57,12 +57,12 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }).addTo(map);
      
     
-    for(i=0; i<31; i++){
+    for(i=0; i<32; i++){
    /* var point = [LatiData[i],LongData[i]];
     var marker = L.marker(point, {icon: PackersIcon}).addTo(map).bindPopup(TeamName[i]);
         */
     if(TeamName[i] == "Green Bay Packers"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: 'green',
             fillColor: 'yellow',
             fillOpacity: 1,
@@ -71,7 +71,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Denver Broncos"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: 'Blue',
             fillColor: 'orange',
             fillOpacity: 1,
@@ -81,7 +81,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     
     
     if(TeamName[i] == "Pittsburgh Steelers"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: 'Black',
             fillColor: 'Yellow',
             fillOpacity: 1,
@@ -90,7 +90,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }  
         
     if(TeamName[i] == "Kansas City Chiefs"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: 'Red',
             fillColor: 'White',
             fillOpacity: 1,
@@ -99,7 +99,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "New England Patriots"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#0D254C',
             fillColor: '#C80815',
             fillOpacity: 1,
@@ -108,7 +108,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Buffalo Bills"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#00338d',
             fillColor: 'white',
             fillOpacity: 1,
@@ -117,7 +117,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Carolina Panthers"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#0085CA',
             fillColor: '#A5ACAF',
             fillOpacity: 1,
@@ -126,7 +126,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Seattle Seahawks"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#002244',
             fillColor: '#69BE28',
             fillOpacity: 1,
@@ -135,7 +135,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Indianapolis Colts"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#003B7B',
             fillColor: '#FFFFFF',
             fillOpacity: 1,
@@ -144,7 +144,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Arizona Cardinals"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#9B2743',
             fillColor: 'white',
             fillOpacity: 1,
@@ -153,7 +153,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Baltimore Ravens"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#280353',
             fillColor: 'black',
             fillOpacity: 1,
@@ -162,7 +162,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Houston Texans"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#02253A',
             fillColor: '#B31B34',
             fillOpacity: 1,
@@ -171,7 +171,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "New Orleans Saints"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#D2B887',
             fillColor: 'black',
             fillOpacity: 1,
@@ -180,7 +180,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Philadelphia Eagles"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#003B48',
             fillColor: '#C0C0C0',
             fillOpacity: 1,
@@ -189,7 +189,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Detroit Lions"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#006DB0',
             fillColor: '#C5C7CF',
             fillOpacity: 1,
@@ -198,7 +198,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }  
         
     if(TeamName[i] == "Minnesota Vikings"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#582C81',
             fillColor: '#F0BF00',
             fillOpacity: 1,
@@ -207,7 +207,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "New York Giants"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#192F6B',
             fillColor: '#CA001A',
             fillOpacity: 1,
@@ -216,7 +216,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Atlanta Falcons"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#A6192D',
             fillColor: 'black',
             fillOpacity: 1,
@@ -225,7 +225,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Dallas Cowboys"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#0D254c',
             fillColor: '#87909b',
             fillOpacity: 1,
@@ -234,7 +234,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Jacksonville Jaguars"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#9F792c',
             fillColor: '#006778',
             fillOpacity: 1,
@@ -243,7 +243,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Miami Dolphins"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#008D97',
             fillColor: '#F5811F',
             fillOpacity: 1,
@@ -252,7 +252,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
     
     if(TeamName[i] == "Cincinnati Bengals"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#A6192D',
             fillColor: 'black',
             fillOpacity: 1,
@@ -261,7 +261,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
     
     if(TeamName[i] == "Oakland Raiders"){  
-        L.circle([LatiData[i],LongData[i]], 45000, {
+        L.circle([LatiData[i],LongData[i]], 25000, {
             color: 'black',
             fillColor: '#C4C8CB',
             fillOpacity: 1,
@@ -270,7 +270,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Tampa Bay Buccaneers"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#D60A0B',
             fillColor: '#89765F',
             fillOpacity: 1,
@@ -279,7 +279,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Los Angeles Rams"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#13264B',
             fillColor: '#C9AF74',
             fillOpacity: 1,
@@ -288,7 +288,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Chicago Bears"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#03202F',
             fillColor: '#DD4814',
             fillOpacity: 1,
@@ -297,7 +297,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "Cleveland Browns"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#eb3300',
             fillColor: 'brown',
             fillOpacity: 1,
@@ -306,7 +306,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
     
     if(TeamName[i] == "San Diego Chargers"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#FFB81C',
             fillColor: '#0072CE',
             fillOpacity: 1,
@@ -315,7 +315,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "San Francisco 49ers"){  
-        L.circle([LatiData[i],LongData[i]], 30000, {
+        L.circle([LatiData[i],LongData[i]], 18000, {
             color: '#AF1E2C',
             fillColor: '#E6BE8A',
             fillOpacity: 1,
@@ -324,7 +324,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
         
     if(TeamName[i] == "New York Jets"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#0C371D',
             fillColor: 'white',
             fillOpacity: 1,
@@ -333,22 +333,22 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
     }
     
     if(TeamName[i] == "Washington Redskins"){  
-        L.circle([LatiData[i],LongData[i]], 60000, {
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#773141',
             fillColor: '#FFB612',
             fillOpacity: 1,
 
         }).addTo(map).bindPopup(TeamName[i]);
     }
-        
-        
-    L.circle([LatiData[31],LongData[31]], 60000, {
+    
+    if(TeamName[i] == "Tennessee Titans"){  
+        L.circle([LatiData[i],LongData[i]], 20000, {
             color: '#648FCC',
             fillColor: '#0D254C',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[31]);  
-        
+        }).addTo(map).bindPopup(TeamName[i]);
+    }
     
 }
     
