@@ -4,16 +4,13 @@ var LongData = [];
 var LatiData = [];
 var TeamName = [];
 
+var CoachScore = [];
+var FanScore = [];
+var DollarScore = [];
+var StadiumScore = [];
+var WinScore = [];
 
-  var PackersIcon = L.icon({
-		iconUrl: 'images/Packers.png',
-		iconSize: [32, 37],
-		iconAnchor: [16, 37],
-		popupAnchor: [0, -28]});
-/*d3.csv( 'data/NFLdata.csv', function( csvData ){
-  data = csvData;
-  checkDataset( data );
-});*/
+
 function checkDataset(dataset) {
     if (dataset.length > 0)
         $("#dataCheck").append("<p>Data loaded correctly!</p>");
@@ -35,6 +32,11 @@ d3.csv("data/NFLdata.csv", function(error, data) {
     data.map(function(d){
         LongData.push(+d.longitude);
         LatiData.push(+d.latitude);
+        CoachScore.push(d.CCH);
+        FanScore.push(d.FRL);
+        DollarScore.push(d.BNG);
+        StadiumScore.push(d.STX);
+        WinScore.push(d.TRD);
     })
    // console.log("Long: ", LongData);
   //  console.log("Lati: ", LatiData);
@@ -55,6 +57,8 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             'Imagery © <a href="http://mapbox.com">Mapbox</a>',
         id: 'mapbox.streets'
     }).addTo(map);
+    
+    
      
     
     for(i=0; i<32; i++){
@@ -67,7 +71,8 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: 'yellow',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
+       // console.log(DollarScore[i]);
     }
         
     if(TeamName[i] == "Denver Broncos"){  
@@ -76,7 +81,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: 'orange',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
     
     
@@ -86,7 +91,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: 'Yellow',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }  
         
     if(TeamName[i] == "Kansas City Chiefs"){  
@@ -95,7 +100,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: 'White',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "New England Patriots"){  
@@ -104,7 +109,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#C80815',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Buffalo Bills"){  
@@ -113,7 +118,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: 'white',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Carolina Panthers"){  
@@ -122,7 +127,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#A5ACAF',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Seattle Seahawks"){  
@@ -131,7 +136,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#69BE28',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Indianapolis Colts"){  
@@ -140,7 +145,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#FFFFFF',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Arizona Cardinals"){  
@@ -149,7 +154,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: 'white',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Baltimore Ravens"){  
@@ -158,7 +163,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: 'black',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Houston Texans"){  
@@ -167,7 +172,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#B31B34',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "New Orleans Saints"){  
@@ -176,7 +181,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: 'black',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Philadelphia Eagles"){  
@@ -185,7 +190,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#C0C0C0',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Detroit Lions"){  
@@ -194,7 +199,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#C5C7CF',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }  
         
     if(TeamName[i] == "Minnesota Vikings"){  
@@ -203,7 +208,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#F0BF00',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "New York Giants"){  
@@ -212,7 +217,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#CA001A',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Atlanta Falcons"){  
@@ -221,7 +226,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: 'black',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Dallas Cowboys"){  
@@ -230,7 +235,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#87909b',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Jacksonville Jaguars"){  
@@ -239,7 +244,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#006778',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Miami Dolphins"){  
@@ -248,7 +253,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#F5811F',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
     
     if(TeamName[i] == "Cincinnati Bengals"){  
@@ -257,7 +262,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: 'black',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
     
     if(TeamName[i] == "Oakland Raiders"){  
@@ -266,7 +271,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#C4C8CB',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Tampa Bay Buccaneers"){  
@@ -275,7 +280,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#89765F',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Los Angeles Rams"){  
@@ -284,7 +289,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#C9AF74',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Chicago Bears"){  
@@ -293,7 +298,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#DD4814',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "Cleveland Browns"){  
@@ -302,7 +307,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: 'brown',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
     
     if(TeamName[i] == "San Diego Chargers"){  
@@ -311,7 +316,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#0072CE',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "San Francisco 49ers"){  
@@ -320,7 +325,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#E6BE8A',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
         
     if(TeamName[i] == "New York Jets"){  
@@ -329,7 +334,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: 'white',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
     
     if(TeamName[i] == "Washington Redskins"){  
@@ -338,7 +343,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#FFB612',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
     
     if(TeamName[i] == "Tennessee Titans"){  
@@ -347,7 +352,7 @@ var map = L.map('mapid').setView([39.75621, -99.99404], 4 );
             fillColor: '#0D254C',
             fillOpacity: 1,
 
-        }).addTo(map).bindPopup(TeamName[i]);
+        }).addTo(map).bindPopup(TeamName[i] + ': <br> Value of Ticket Rating: ' + DollarScore[i] + '<br> Coaching Rating: ' + CoachScore[i]+ '<br> Stadium Rating: ' + StadiumScore[i]+ '<br> Tradition of Winning Rating: ' + WinScore[i]+ '<br> Fan Relations Rating: ' + FanScore[i]);
     }
     
 }
