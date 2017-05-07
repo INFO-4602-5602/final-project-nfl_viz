@@ -33,7 +33,7 @@ var svg = d3.select("body").append("svg")
 
 function Uniform() {
 	svg.selectAll("*").remove();
-	d3.csv("Uniform.csv", function(error, data) {
+	d3.csv("data/Uniform.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.UNI = +d.UNI;
@@ -78,7 +78,7 @@ function Uniform() {
 
 function Players() {
 	svg.selectAll("*").remove();
-	d3.csv("Players.csv", function(error, data) {
+	d3.csv("data/Players.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.PLA = +d.PLA;
@@ -124,7 +124,7 @@ function Players() {
 
 function Affordability() {
 	svg.selectAll("*").remove();
-	d3.csv("Affordability.csv", function(error, data) {
+	d3.csv("data/Affordability.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.AFF = +d.AFF;
@@ -170,7 +170,7 @@ function Affordability() {
 
 function BandWagonFactor() {
 	svg.selectAll("*").remove();
-	d3.csv("BandwagonFactor.csv", function(error, data) {
+	d3.csv("data/BandwagonFactor.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.BWG = +d.BWG;
@@ -216,7 +216,7 @@ function BandWagonFactor() {
 
 function BangForBuck() {
 	svg.selectAll("*").remove();
-	d3.csv("BangForBuck.csv", function(error, data) {
+	d3.csv("data/BangForBuck.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.BNG = +d.BNG;
@@ -262,7 +262,7 @@ function BangForBuck() {
 
 function Behavior() {
 	svg.selectAll("*").remove();
-	d3.csv("Behavior.csv", function(error, data) {
+	d3.csv("data/Behavior.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.BEH = +d.BEH;
@@ -308,7 +308,7 @@ function Behavior() {
 
 function BigMarketValue() {
 	svg.selectAll("*").remove();
-	d3.csv("BigMarketValue.csv", function(error, data) {
+	d3.csv("data/BigMarketValue.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.BMK = +d.BMK;
@@ -354,7 +354,7 @@ function BigMarketValue() {
 
 function Coaching() {
 	svg.selectAll("*").remove();
-	d3.csv("Coaching.csv", function(error, data) {
+	d3.csv("data/Coaching.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.CCH = +d.CCH;
@@ -400,7 +400,7 @@ function Coaching() {
 
 function FanRelations() {
 	svg.selectAll("*").remove();
-	d3.csv("FanRelations.csv", function(error, data) {
+	d3.csv("data/FanRelations.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.FRL = +d.FRL;
@@ -446,7 +446,7 @@ function FanRelations() {
 
 function FutureWins() {
 	svg.selectAll("*").remove();
-	d3.csv("FutureWins.csv", function(error, data) {
+	d3.csv("data/FutureWins.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.FUT = +d.FUT;
@@ -492,7 +492,7 @@ function FutureWins() {
 
 function NewYorkCityProximity() {
 	svg.selectAll("*").remove();
-	d3.csv("NewYorkCityProximity.csv", function(error, data) {
+	d3.csv("data/NewYorkCityProximity.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.NYP = +d.NYP;
@@ -538,7 +538,7 @@ function NewYorkCityProximity() {
 
 function Ownership() {
 	svg.selectAll("*").remove();
-	d3.csv("Ownership.csv", function(error, data) {
+	d3.csv("data/Ownership.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.OWN = +d.OWN;
@@ -584,7 +584,7 @@ function Ownership() {
 
 function SmallMarketValue() {
 	svg.selectAll("*").remove();
-	d3.csv("SmallMarketValue.csv", function(error, data) {
+	d3.csv("data/SmallMarketValue.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.SMK = +d.SMK;
@@ -630,7 +630,7 @@ function SmallMarketValue() {
 
 function StadiumExperience() {
 	svg.selectAll("*").remove();
-	d3.csv("StadiumExperience.csv", function(error, data) {
+	d3.csv("data/StadiumExperience.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.STX = +d.STX;
@@ -676,7 +676,7 @@ function StadiumExperience() {
 
 function StLouisProximity() {
 	svg.selectAll("*").remove();
-	d3.csv("StLouisProximity.csv", function(error, data) {
+	d3.csv("data/StLouisProximity.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.SLP = +d.SLP;
@@ -722,7 +722,7 @@ function StLouisProximity() {
 
 function Tradition() {
 	svg.selectAll("*").remove();
-	d3.csv("Tradition.csv", function(error, data) {
+	d3.csv("data/Tradition.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.TRD = +d.TRD;
