@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<form name="Buttons" id="Buttons">
+<head>
+	<title>Test</title>
+	<style>
+
+	.axis {
+	  font: 10px sans-serif;
+	}
+
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}
+
+	</style>
+</head>
+<h1>Test HTML</h1>
+<body>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script type="text/javascript" src="AttributeGraph.js"></script>
+
+	<!--<input type="radio" name="Score" id="Uniform" value="Uniform" onclick="Uniform()">Uniform Score</input>
+	<input type="radio" name="Score" id="Player" value="Player" onclick="Players()">Player Score</input>-->
+	<input type="button" name="attr" onclick="location.reload()" value="Click Before Viewing Next Attribute"></input>
+	<input type="radio" name="attr" onclick="Uniform()" value="Uniform Score">UNI</input>
+	<input type="radio" name="attr" onclick="Players()" value="Player Score">PLA</input>
+	<input type="radio" name="attr" onclick="Affordability()" value="Player Score">AFF</input>
+	<input type="radio" name="attr" onclick="BandWagonFactor()" value="Player Score">BWG</input>
+	<input type="radio" name="attr" onclick="BangForBuck()" value="Player Score">BNG</input>
+	<input type="radio" name="attr" onclick="Behavior()" value="Player Score">BEH</input>
+	<input type="radio" name="attr" onclick="BigMarketValue()" value="Player Score">BMK</input>
+	<input type="radio" name="attr" onclick="Coaching()" value="Player Score">CCH</input>
+	<input type="radio" name="attr" onclick="FanRelations()" value="Player Score">FRL</input>
+	<input type="radio" name="attr" onclick="FutureWins()" value="Player Score">FUT</input>
+	<input type="radio" name="attr" onclick="NewYorkCityProximity()" value="Player Score">NYP</input>
+	<input type="radio" name="attr" onclick="Ownership()" value="Player Score">OWN</input>
+	<input type="radio" name="attr" onclick="SmallMarketValue()" value="Player Score">SMK</input>
+	<input type="radio" name="attr" onclick="StadiumExperience()" value="Player Score">STX</input>
+	<input type="radio" name="attr" onclick="StLouisProximity()" value="Player Score">SLP</input>
+	<input type="radio" name="attr" onclick="Tradition()" value="Player Score">TRD</input>
+	
+	<!--<button id="Clear" onclick="clear()">Click Before Switching Attributes</button>-->
+</body>
+</form>
+</html>
