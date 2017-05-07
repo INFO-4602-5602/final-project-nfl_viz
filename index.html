@@ -32,6 +32,33 @@
       fill: none;
       stroke: #000;
     }
+    
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    li a.active {
+        background-color: gold;
+        color: black;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
 </style>
 <head>
 	
@@ -53,6 +80,10 @@
     
     <h1>NFL Visualization</h1>
       <h3>Discover more about all the NFL teams and their culture!</h3>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="test.html">Dive Deeper Here!</a></li>
+    </ul>
       
       <p><i>Click on diffrent stadiums across the country to learn more:</i></p>
     
@@ -62,7 +93,9 @@
     
 <script type="text/javascript" src="NFLmap.js"></script>
     
-<h4>Ranking scores based on: Coaching Staff, Fan Relations, Wins per Fan Dollar, Stadium Experience, and Success(Championships/division titles/wins in team history)</h4>
+<h3>Stars are given for: Coaching Staff, Fan Relations, Wins per Fan Dollar, Stadium Experience, and Success(Championships/division titles/wins in team history)</h3>
+<h4>The five categories above were chosen by us as the most important. Check out below to see all scores taken into account.</h4>
+    
 
 <div id="filteredGraph" style="background-color: white; width: 1500px; height: 860px;">
     <h1 style="color:black;">NFL Team's Rating Breakdown</h1>

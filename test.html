@@ -21,14 +21,56 @@
 	  stroke: #000;
 	  shape-rendering: crispEdges;
 	}
+        
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    li a.active {
+        background-color: gold;
+        color: black;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+        
+        #header1{
+            text-align: center;
+        }
+        #graph1{
+            padding-left: 200px;
+            align-content: center;
+        }
 	</style>
 
 </head>
-<h1>Attribute Breakdown</h1>
+    <h1 id="header1">Attribute Breakdown</h1>
+    
+<ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="test.html">Dive Deeper Here!</a></li>
+    </ul>
+
 <body>
+    <section id="graph1">
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script type="text/javascript" src="AttributeGraph.js"></script>
-	
+	</section>
     	<style>
 			.dropbtn {
     			background-color: #000000;
@@ -44,7 +86,8 @@
 			}
 
 			.dropdown {
-    			float: right;
+    			float: left;
+                padding-left: 300px;
     			position: relative;
     			display: inline-block;
 			}
