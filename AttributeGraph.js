@@ -30,7 +30,9 @@ var svg = d3.select("body").append("svg")
 
 //svg.call(tip);
 
+
 function Uniform() {
+	svg.selectAll("*").remove();
 	d3.csv("Uniform.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -71,11 +73,11 @@ function Uniform() {
       .attr("height", function(d) { return height - y(d.UNI); });
       //.on('mouseover', tip.show)
       //.on('mouseout', tip.hide);
-
 });
 }
 
 function Players() {
+	svg.selectAll("*").remove();
 	d3.csv("Players.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -121,6 +123,7 @@ function Players() {
 }
 
 function Affordability() {
+	svg.selectAll("*").remove();
 	d3.csv("Affordability.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -166,6 +169,7 @@ function Affordability() {
 }
 
 function BandWagonFactor() {
+	svg.selectAll("*").remove();
 	d3.csv("BandwagonFactor.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -211,6 +215,7 @@ function BandWagonFactor() {
 }
 
 function BangForBuck() {
+	svg.selectAll("*").remove();
 	d3.csv("BangForBuck.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -256,6 +261,7 @@ function BangForBuck() {
 }
 
 function Behavior() {
+	svg.selectAll("*").remove();
 	d3.csv("Behavior.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -301,6 +307,7 @@ function Behavior() {
 }
 
 function BigMarketValue() {
+	svg.selectAll("*").remove();
 	d3.csv("BigMarketValue.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -346,6 +353,7 @@ function BigMarketValue() {
 }
 
 function Coaching() {
+	svg.selectAll("*").remove();
 	d3.csv("Coaching.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -391,6 +399,7 @@ function Coaching() {
 }
 
 function FanRelations() {
+	svg.selectAll("*").remove();
 	d3.csv("FanRelations.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -436,6 +445,7 @@ function FanRelations() {
 }
 
 function FutureWins() {
+	svg.selectAll("*").remove();
 	d3.csv("FutureWins.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -481,6 +491,7 @@ function FutureWins() {
 }
 
 function NewYorkCityProximity() {
+	svg.selectAll("*").remove();
 	d3.csv("NewYorkCityProximity.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -526,6 +537,7 @@ function NewYorkCityProximity() {
 }
 
 function Ownership() {
+	svg.selectAll("*").remove();
 	d3.csv("Ownership.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -571,6 +583,7 @@ function Ownership() {
 }
 
 function SmallMarketValue() {
+	svg.selectAll("*").remove();
 	d3.csv("SmallMarketValue.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -616,6 +629,7 @@ function SmallMarketValue() {
 }
 
 function StadiumExperience() {
+	svg.selectAll("*").remove();
 	d3.csv("StadiumExperience.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -661,6 +675,7 @@ function StadiumExperience() {
 }
 
 function StLouisProximity() {
+	svg.selectAll("*").remove();
 	d3.csv("StLouisProximity.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -706,6 +721,7 @@ function StLouisProximity() {
 }
 
 function Tradition() {
+	svg.selectAll("*").remove();
 	d3.csv("Tradition.csv", function(error, data) {
 
     data.forEach(function(d) {
@@ -748,6 +764,10 @@ function Tradition() {
       //.on('mouseout', tip.hide);
 
 });
+}
+
+function Clear() {
+	location.reload();
 }
 
 ////////////////////////////////////////////////////////////////
