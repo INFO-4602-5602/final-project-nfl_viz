@@ -1,50 +1,143 @@
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
-<form name="Buttons" id="Buttons">
+<form onsubmit="return false">
 <head>
 	<title>Test</title>
 	<style>
+	html{
+		 background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png');
+		 color: white;
+	}
 
 	.axis {
 	  font: 10px sans-serif;
+	  fill: #ffffff
 	}
 
 	.axis path,
 	.axis line {
-	  fill: none;
+	  fill: #ffffff;
 	  stroke: #000;
 	  shape-rendering: crispEdges;
 	}
-
 	</style>
+
 </head>
-<h1>Test HTML</h1>
+<h1>Attribute Breakdown</h1>
 <body>
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script type="text/javascript" src="AttributeGraph.js"></script>
 
-	<!--<input type="radio" name="Score" id="Uniform" value="Uniform" onclick="Uniform()">Uniform Score</input>
-	<input type="radio" name="Score" id="Player" value="Player" onclick="Players()">Player Score</input>-->
 	<input type="button" name="attr" onclick="location.reload()" value="Click Before Viewing Next Attribute"></input>
-	<input type="radio" name="attr" onclick="Uniform()" value="Uniform Score">UNI</input>
-	<input type="radio" name="attr" onclick="Players()" value="Player Score">PLA</input>
-	<input type="radio" name="attr" onclick="Affordability()" value="Player Score">AFF</input>
-	<input type="radio" name="attr" onclick="BandWagonFactor()" value="Player Score">BWG</input>
-	<input type="radio" name="attr" onclick="BangForBuck()" value="Player Score">BNG</input>
-	<input type="radio" name="attr" onclick="Behavior()" value="Player Score">BEH</input>
-	<input type="radio" name="attr" onclick="BigMarketValue()" value="Player Score">BMK</input>
-	<input type="radio" name="attr" onclick="Coaching()" value="Player Score">CCH</input>
-	<input type="radio" name="attr" onclick="FanRelations()" value="Player Score">FRL</input>
-	<input type="radio" name="attr" onclick="FutureWins()" value="Player Score">FUT</input>
-	<input type="radio" name="attr" onclick="NewYorkCityProximity()" value="Player Score">NYP</input>
-	<input type="radio" name="attr" onclick="Ownership()" value="Player Score">OWN</input>
-	<input type="radio" name="attr" onclick="SmallMarketValue()" value="Player Score">SMK</input>
-	<input type="radio" name="attr" onclick="StadiumExperience()" value="Player Score">STX</input>
-	<input type="radio" name="attr" onclick="StLouisProximity()" value="Player Score">SLP</input>
-	<input type="radio" name="attr" onclick="Tradition()" value="Player Score">TRD</input>
+    <!--<input type="radio" name="attr" onclick="Uniform()" value="Uniform Score">UNI</input>
+    <input type="radio" name="attr" onclick="Players()" value="Player Score">PLA</input>
+    <input type="radio" name="attr" onclick="Affordability()" value="Affordability Score">AFF</input>
+    <input type="radio" name="attr" onclick="BandWagonFactor()" value="BandWagonFactor Score">BWG</input>
+    <input type="radio" name="attr" onclick="BangForBuck()" value="BangForBuck Score">BNG</input>
+    <input type="radio" name="attr" onclick="Behavior()" value="Behavior Score">BEH</input>
+    <input type="radio" name="attr" onclick="BigMarketValue()" value="BigMarketValue Score">BMK</input>
+    <input type="radio" name="attr" onclick="Coaching()" value="Coaching Score">CCH</input>
+    <input type="radio" name="attr" onclick="FanRelations()" value="FanRelations Score">FRL</input>
+    <input type="radio" name="attr" onclick="FutureWins()" value="FutureWins Score">FUT</input>
+    <input type="radio" name="attr" onclick="NewYorkCityProximity()" value="NewYorkCityProximity Score">NYP</input>
+    <input type="radio" name="attr" onclick="Ownership()" value="Ownership Score">OWN</input>
+    <input type="radio" name="attr" onclick="SmallMarketValue()" value="SmallMarketValue Score">SMK</input>
+    <input type="radio" name="attr" onclick="StadiumExperience()" value="StadiumExperience Score">STX</input>
+    <input type="radio" name="attr" onclick="StLouisProximity()" value="StLouisProximity Score">SLP</input>
+    <input type="radio" name="attr" onclick="Tradition()" value="Tradition Score">TRD</input> -->
 	
-	<!--<button id="Clear" onclick="clear()">Click Before Switching Attributes</button>-->
+    	<style>
+			.dropbtn {
+    			background-color: #000000;
+    			color: white;
+    			padding: 16px;
+    			font-size: 16px;
+    			border: none;
+    			cursor: pointer;
+			}
+
+			.dropbtn:hover, .dropbtn:focus {
+   				background-color: #000000;
+			}
+
+			.dropdown {
+    			float: right;
+    			position: relative;
+    			display: inline-block;
+			}
+
+			.dropdown-content {
+    			display: none;
+    			position: absolute;
+    			background-color: #f9f9f9;
+   				min-width: 160px;
+    			overflow: auto;
+    			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    			right: 0;
+    			z-index: 1;
+			}
+
+			.dropdown-content a {
+    			color: black;
+    			padding: 12px 16px;
+    			text-decoration: none;
+    			display: block;
+			}
+
+			.dropdown a:hover {background-color: #D3D3D3}
+
+			.show {display:block;}
+		</style>
+
+	<div class="dropdown">
+	<button onclick="myFunction()" class="dropbtn">Attributes</button>
+  		<div id="myDropdown" class="dropdown-content">
+    		<a onclick="Uniform()">Uniform</a>
+    		<a onclick="Players()">Players</a>
+    		<a onclick="Affordability()">Affordability</a>
+    		<a onclick="BandWagonFactor()">Band Wagon Factor</a>
+    		<a onclick="BangForBuck()">Bang For Buck</a>
+    		<a onclick="Behavior()">Behavior</a>
+    		<a onclick="BigMarketValue()">Big Market Value</a>
+    		<a onclick="Coaching()">Coaching</a>
+    		<a onclick="FanRelations()">Fan Relations</a>
+    		<a onclick="FutureWins()">Future Wins</a>
+    		<a onclick="NewYorkCityProximity()">NYC Proximity</a>
+    		<a onclick="Ownership()">Ownership</a>
+    		<a onclick="SmallMarketValue()">Small Market Value</a>
+    		<a onclick="StadiumExperience()">Stadium Experience</a>
+    		<a onclick="StLouisProximity()">STL Proximity</a>
+    		<a onclick="Tradition()">Tradition</a>
+
+
+
+
+
+  		</div>
+	</div>
+	<script>
+		/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+	</script>
 </body>
 </form>
 </html>

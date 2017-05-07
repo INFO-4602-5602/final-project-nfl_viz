@@ -64,14 +64,13 @@ function Uniform() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.UNI); })
       .attr("height", function(d) { return height - y(d.UNI); });
       //.on('mouseover', tip.show)
       //.on('mouseout', tip.hide);
-
 
 });
 }
@@ -110,7 +109,7 @@ function Players() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.PLA); })
@@ -155,7 +154,7 @@ function Affordability() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.AFF); })
@@ -200,7 +199,7 @@ function BandWagonFactor() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.BWG); })
@@ -245,7 +244,7 @@ function BangForBuck() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.BNG); })
@@ -290,7 +289,7 @@ function Behavior() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.BEH); })
@@ -335,7 +334,7 @@ function BigMarketValue() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.BMK); })
@@ -380,7 +379,7 @@ function Coaching() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.CCH); })
@@ -425,7 +424,7 @@ function FanRelations() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.FRL); })
@@ -470,7 +469,7 @@ function FutureWins() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.FUT); })
@@ -515,7 +514,7 @@ function NewYorkCityProximity() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.NYP); })
@@ -560,7 +559,7 @@ function Ownership() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.OWN); })
@@ -605,7 +604,7 @@ function SmallMarketValue() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.SMK); })
@@ -650,7 +649,7 @@ function StadiumExperience() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.STX); })
@@ -695,7 +694,7 @@ function StLouisProximity() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.SLP); })
@@ -740,7 +739,7 @@ function Tradition() {
   svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
-      .style("fill", "steelblue")
+      .style("fill", "gold")
       .attr("x", function(d) { return x(d.Team); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.TRD); })
@@ -750,3 +749,27 @@ function Tradition() {
 
 });
 }
+
+////////////////////////////////////////////////////////////////
+
+
+// /* When the user clicks on the button, 
+// toggle between hiding and showing the dropdown content */
+// function myFunction() {
+//     document.getElementById("myDropdown").classList.toggle("show");
+// }
+
+// // Close the dropdown if the user clicks outside of it
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropbtn')) {
+
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//       }
+//     }
+//   }
+// }
