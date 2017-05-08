@@ -1,3 +1,6 @@
+<h2>How to run our project</h2>
+<h3>Clone this repo and then local host or live preview our index.html file</h3>
+
 # Final Project
 For your final project, use the skills you've developed in this class to tackle a new problem. For example, you could develop a visualization for a complex dataset, construct a physicalization, visualize an algorithmic process, or run an experiment to explore graphical perception. Be creative and have fun! 
 
